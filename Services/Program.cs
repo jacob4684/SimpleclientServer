@@ -10,6 +10,7 @@ namespace Services
     {
         static void Main(string[] args)
         {
+            Networking.Logger();
         }
     }
 }
