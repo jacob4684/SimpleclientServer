@@ -15,7 +15,7 @@ namespace Networking
 
         static Logger()
         {
-            path = "C:\KodeMappe\log";
+            path = @"C:\KodeMappe\log";
         }
         public static void Log(string message, bool OmitDate)
         {
