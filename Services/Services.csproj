@@ -49,6 +49,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{44c20434-f45c-47f0-97c0-992bf251be2e}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Networking\Networking.csproj">
+      <Project>{e2a13c2d-a70c-406c-9d35-0dabc098c451}</Project>
+      <Name>Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="P:\Visual Studio 2015\Projects\DataAccessNamespace\DataAccessNamespace\DataAccess.csproj">
+      <Project>{e4eacb29-e05d-4834-b17a-848b479c2343}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
