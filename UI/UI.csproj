@@ -104,6 +104,10 @@
       <Project>{44c20434-f45c-47f0-97c0-992bf251be2e}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="P:\Visual Studio 2015\Projects\DataAccessNamespace\DataAccessNamespace\DataAccess.csproj">
+      <Project>{E4EACB29-E05D-4834-B17A-848B479C2343}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
