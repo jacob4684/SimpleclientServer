@@ -19,7 +19,7 @@ namespace DataAccess
         }
         public DataAccess()
         {
-            connectionString = @"Server=CV-PC-S-02\SQLEXPRESS;Database=FlydeKasser;Trusted_Connection=True;";
+            connectionString = @"Server=CV-PC-S-02\SQLEXPRESS;Database=SimpleClientServerDB;Trusted_Connection=True;";
         }
         protected void SetCon(string strSqlCon)
         {
