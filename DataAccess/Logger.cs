@@ -9,13 +9,18 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// used to send logfile to the debug folder 
+    /// </summary>
     public static class Logger
     {
         /// <summary>
         /// the place where the log is save on the pc
         /// </summary>
         private readonly static string Path;
-
+        /// <summary>
+        /// tries to insert debug+\log.txt into Path throws Exception if it cant
+        /// </summary>
         static Logger()
         {
             try
@@ -33,6 +38,10 @@ namespace DataAccess
 
 
         }
+        /// <summary>
+        /// if the message are not null create a logfile with timestamp on 
+        /// </summary>
+        /// <param name="message">is the message for the logfile</param>
         public static void Log(string message)
         {
             if (message != null)
