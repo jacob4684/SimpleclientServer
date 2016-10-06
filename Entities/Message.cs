@@ -29,7 +29,7 @@ namespace Entities
 
         #region Constructor
         /// <summary>
-        /// Construct the message
+        /// Construct the message with contents, sender and receiver
         /// </summary>
         /// <param name="contents">is the content of the message</param>
         /// <param name="sender">is the user who send the message</param>
