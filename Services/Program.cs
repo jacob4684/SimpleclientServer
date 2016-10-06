@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess;
 
 namespace Services
 {
@@ -11,7 +12,7 @@ namespace Services
     {
         static void Main(string[] args)
         {
-            //test
+            Logger.Log("test");
         }
     }
 }

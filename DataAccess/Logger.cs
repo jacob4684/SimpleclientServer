@@ -23,7 +23,7 @@ namespace DataAccess
                 string codebase = Assembly.GetExecutingAssembly().CodeBase;
                 UriBuilder uri = new UriBuilder(codebase);
                 string path = Uri.UnescapeDataString(uri.Path);
-                Path = System.IO.Path.GetDirectoryName(path);
+                Path = System.IO.Path.GetDirectoryName(path)+ "\\log.txt";
             }
             catch (Exception)
             {
@@ -39,7 +39,11 @@ namespace DataAccess
             {
                 DateTime dateTimeNow = new DateTime();
                 dateTimeNow = DateTime.Now;
-                File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) + message);
+                System.IO.File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) +" "+ message);
+                //using (System.IO.StreamWriter file = new System.IO.StreamWriter(Path))
+                //{
+                //    file.WriteLine(dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) + message);
+                //}
             }
 
         }

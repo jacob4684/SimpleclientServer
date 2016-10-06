@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{dc0d6bbc-c41d-437f-a6ba-768c8f10a957}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{44c20434-f45c-47f0-97c0-992bf251be2e}</Project>
       <Name>Entities</Name>
