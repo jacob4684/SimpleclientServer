@@ -35,20 +35,34 @@ namespace Entities
         #endregion
         #region Properties
         /// <summary>
-        /// Get or sets the Password
+        /// Get or sets the Password. Validates it so its lower then 21 and not null or white space
         /// </summary>
         public string Password
         {
             get { return password; }
-            set { password = value; }
+            set
+            {
+                if (value.Length>20 && value.Trim().Length==0)
+                {
+                    throw new ArgumentException("Password to long have to be less then 21 and not null or white space ");
+                }
+                password = value;
+            }
         }
         /// <summary>
-        /// Get or sets the UserName
+        /// Get or sets the UserName. Validates it so its lower then 31 and not null or white space
         /// </summary>
         public string UserName
         {
             get { return userName; }
-            set { userName = value; }
+            set
+            {
+                if (value.Length > 30 && value.Trim().Length == 0)
+                {
+                    throw new ArgumentException("Username to long have to be less then 31 and not null or white space ");
+                }
+                userName = value;
+            }
         }
         #endregion
 
