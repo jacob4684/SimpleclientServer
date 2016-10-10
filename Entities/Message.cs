@@ -13,15 +13,15 @@ namespace Entities
     {
         #region Fields
         /// <summary>
-        /// contain contents there get send to the user
+        /// text content of the Message
         /// </summary>
         private string contents;
         /// <summary>
-        /// contain the user sends the message
+        /// the sender of the Message
         /// </summary>
         private User sender;
         /// <summary>
-        /// contain the user who receives the message
+        /// the receive of the Message
         /// </summary>
         private User receiver;
         #endregion
