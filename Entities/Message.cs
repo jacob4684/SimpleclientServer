@@ -64,23 +64,42 @@ namespace Entities
             }
         }
         /// <summary>
-        /// Get or sets the Sender
+        /// Get or sets the validated Sender
         /// </summary>
         public User Sender
         {
             get { return sender; }
             set
             {
+                if (value.Password == null)
+                {
+                    throw new ArgumentException("Password can't be null");
+                }
+                else if (value.UserName == null)
+                {
+                    throw new ArgumentException("UserName can't be null");
+                }
                 sender = value;
             }
         }
         /// <summary>
-        /// Get or sets the receiver
+        /// Get or sets the validated receiver
         /// </summary>
         public User Receiver
         {
             get { return receiver; }
-            set { receiver = value; }
+            set
+            {
+                if (value.Password == null)
+                {
+                    throw new ArgumentException("Password can't be null");
+                }
+                else if (value.UserName == null)
+                {
+                    throw new ArgumentException("UserName can't be null");
+                }
+                receiver = value;
+            }
         }
         #endregion
 
