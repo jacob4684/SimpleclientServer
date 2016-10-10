@@ -45,12 +45,23 @@ namespace Entities
 
         #region Properties
         /// <summary>
-        /// Get or sets the Contents
+        /// Get or sets the validated Contents
         /// </summary>
         public string Contents
         {
             get { return contents; }
-            set { contents = value; }
+            set
+            {
+                if ( value.Length > 255 )
+                {
+                    throw new ArgumentException("message to long");
+                }
+                else if (value == null)
+                {
+                    throw new ArgumentException("message can't be null");
+                }
+                contents = value;
+            }
         }
         /// <summary>
         /// Get or sets the Sender
@@ -58,7 +69,10 @@ namespace Entities
         public User Sender
         {
             get { return sender; }
-            set { sender = value; }
+            set
+            {
+                sender = value;
+            }
         }
         /// <summary>
         /// Get or sets the receiver

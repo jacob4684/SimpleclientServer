@@ -42,9 +42,17 @@ namespace Entities
             get { return password; }
             set
             {
-                if (value.Length>20 && value.Trim().Length==0)
+                if (value== null)
                 {
-                    throw new ArgumentException("Password to long have to be less then 21 and not null or white space ");
+                    throw new ArgumentException("Password can't be null");
+                }
+                else if (value.Trim().Length == 0)
+                {
+                    throw new ArgumentException("Password can't be white space");
+                }
+                else if (value.Length > 20)
+                {
+                    throw new ArgumentException("Password to long have to be less then 21 character");
                 }
                 password = value;
             }
@@ -57,9 +65,17 @@ namespace Entities
             get { return userName; }
             set
             {
-                if (value.Length > 30 && value.Trim().Length == 0)
+                if (value == null)
                 {
-                    throw new ArgumentException("Username to long have to be less then 31 and not null or white space ");
+                    throw new ArgumentException("UserName can't be null");
+                }
+                else if (value.Trim().Length == 0)
+                {
+                    throw new ArgumentException("UserName can't be white space");
+                }
+                else if (value.Length > 30)
+                {
+                    throw new ArgumentException("UserName to long have to be less then 31 character");
                 }
                 userName = value;
             }
