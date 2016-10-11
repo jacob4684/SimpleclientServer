@@ -71,13 +71,9 @@ namespace Entities
             get { return sender; }
             set
             {
-                if (value.Password == null)
+                if (value == null)
                 {
-                    throw new ArgumentException("Password can't be null");
-                }
-                else if (value.UserName == null)
-                {
-                    throw new ArgumentException("UserName can't be null");
+                    throw new ArgumentException("Sender can't be null");
                 }
                 sender = value;
             }
@@ -90,13 +86,9 @@ namespace Entities
             get { return receiver; }
             set
             {
-                if (value.Password == null)
+                if (value == null)
                 {
-                    throw new ArgumentException("Password can't be null");
-                }
-                else if (value.UserName == null)
-                {
-                    throw new ArgumentException("UserName can't be null");
+                    throw new ArgumentException("Receiver can't be null");
                 }
                 receiver = value;
             }
