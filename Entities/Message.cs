@@ -60,11 +60,7 @@ namespace Entities
                 {
                     throw new ArgumentException("message can't be null");
                 }
-                else if (contents==value)
-                {
-
-                }
-                else
+                else if (contents != value)
                 {
                     contents = value;
                 }
@@ -83,11 +79,7 @@ namespace Entities
                 {
                     throw new ArgumentException("Sender can't be null");
                 }
-                else if (sender ==value)
-                {
-
-                }
-                else
+                else if (sender != value)
                 {
                     sender = value;
                 }
@@ -106,11 +98,8 @@ namespace Entities
                 {
                     throw new ArgumentException("Receiver can't be null");
                 }
-                else if (receiver == value)
-                {
 
-                }
-                else
+                else if (receiver != value)
                 {
                     receiver = value;
                 }
