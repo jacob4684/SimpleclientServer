@@ -60,7 +60,15 @@ namespace Entities
                 {
                     throw new ArgumentException("message can't be null");
                 }
-                contents = value;
+                else if (contents==value)
+                {
+
+                }
+                else
+                {
+                    contents = value;
+                }
+                
             }
         }
         /// <summary>
@@ -75,7 +83,15 @@ namespace Entities
                 {
                     throw new ArgumentException("Sender can't be null");
                 }
-                sender = value;
+                else if (sender ==value)
+                {
+
+                }
+                else
+                {
+                    sender = value;
+                }
+              
             }
         }
         /// <summary>
@@ -90,7 +106,14 @@ namespace Entities
                 {
                     throw new ArgumentException("Receiver can't be null");
                 }
-                receiver = value;
+                else if (receiver == value)
+                {
+
+                }
+                else
+                {
+                    receiver = value;
+                }
             }
         }
         #endregion
