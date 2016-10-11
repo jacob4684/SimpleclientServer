@@ -54,7 +54,11 @@ namespace Entities
                 {
                     throw new ArgumentException("Password to long have to be less then 21 character");
                 }
-                password = value;
+                else if (password != value)
+                {
+                    password = value;
+                }
+               
             }
         }
         /// <summary>
@@ -77,7 +81,11 @@ namespace Entities
                 {
                     throw new ArgumentException("UserName to long have to be less then 31 character");
                 }
-                userName = value;
+                else if (userName != value)
+                {
+                    userName = value;
+                }
+                
             }
         }
         #endregion
