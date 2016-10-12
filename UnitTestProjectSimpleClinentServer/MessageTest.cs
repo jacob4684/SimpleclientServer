@@ -17,9 +17,9 @@ namespace UnitTestProjectSimpleClinentServer
             string password = "1";
             User sender = new User(name, password);
             User receiver = new User(name,password);
-            Message message = new Message(content,sender,receiver);
-            //Act
 
+            //Act
+            Message message = new Message(content, sender, receiver);
             //Assert
         }
         [TestMethod]
@@ -32,9 +32,9 @@ namespace UnitTestProjectSimpleClinentServer
             string password = "1";
             User sender = null;
             User receiver = new User(name, password);
-            Message message = new Message(content, sender, receiver);
-            //Act
 
+            //Act
+            Message message = new Message(content, sender, receiver);
             //Assert
         }
         [TestMethod]
@@ -47,9 +47,9 @@ namespace UnitTestProjectSimpleClinentServer
             string password = "1";
             User sender = new User(name, password);
             User receiver = null;
-            Message message = new Message(content, sender, receiver);
-            //Act
 
+            //Act
+            Message message = new Message(content, sender, receiver);
             //Assert
         }
         [TestMethod]
@@ -63,9 +63,9 @@ namespace UnitTestProjectSimpleClinentServer
             string password = "1";
             User sender = new User(name, password);
             User receiver = new User(name, password);
-            Message message = new Message(content, sender, receiver);
-            //Act
 
+            //Act
+            Message message = new Message(content, sender, receiver);
             //Assert
         }
         [TestMethod]
@@ -77,9 +77,9 @@ namespace UnitTestProjectSimpleClinentServer
             string password = "1";
             User sender = new User(name, password);
             User receiver = new User(name, password);
-            Message message = new Message(content, sender, receiver);
-            //Act
 
+            //Act
+            Message message = new Message(content, sender, receiver);
             //Assert
             Assert.AreEqual(content, message.Contents);
             Assert.AreEqual(sender, message.Sender);

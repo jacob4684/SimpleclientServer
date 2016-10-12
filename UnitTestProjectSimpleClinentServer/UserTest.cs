@@ -14,9 +14,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string name = null;
             string goodPassword = "1";
-            User user = new User(name, goodPassword);
-            //Act
 
+            //Act
+            User user = new User(name, goodPassword);
             //Assert
 
         }
@@ -27,9 +27,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string name = "   ";
             string goodPassword = "1";
-            User user = new User(name, goodPassword);
-            //Act
 
+            //Act
+            User user = new User(name, goodPassword);
             //Assert
 
 
@@ -41,9 +41,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string name = "1234567890123456789012345678901";
             string goodPassword = "1";
-            User user = new User(name, goodPassword);
-            //Act
 
+            //Act
+            User user = new User(name, goodPassword);
             //Assert
 
 
@@ -55,9 +55,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string name = "tim";
             string goodPassword = "1";
-            User user = new User(name, goodPassword);
-            //Act
 
+            //Act
+            User user = new User(name, goodPassword);
             //Assert
             Assert.AreEqual(name, user.UserName);
 
@@ -69,9 +69,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string goodName = "tim";
             string password = null;
-            User user = new User(goodName, password);
-            //Act
 
+            //Act
+            User user = new User(goodName, password);
             //Assert
 
         }
@@ -82,9 +82,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string goodname = "tim";
             string password = "   ";
-            User user = new User(goodname, password);
-            //Act
 
+            //Act
+            User user = new User(goodname, password);
             //Assert
 
 
@@ -96,9 +96,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string goodname = "tim";
             string password = "213123123123123123123123123123123fdff";
-            User user = new User(goodname, password);
-            //Act
 
+            //Act
+            User user = new User(goodname, password);
             //Assert
 
 
@@ -110,9 +110,9 @@ namespace UnitTestProjectSimpleClinentServer
             //Arrange
             string goodname = "tim";
             string password = "1";
-            User user = new User(goodname, password);
-            //Act
 
+            //Act
+            User user = new User(goodname, password);
             //Assert
             Assert.AreEqual(password, user.Password);
         }
