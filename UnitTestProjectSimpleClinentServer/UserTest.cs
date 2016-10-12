@@ -115,7 +115,6 @@ namespace UnitTestProjectSimpleClinentServer
 
             //Assert
             Assert.AreEqual(password, user.Password);
-
         }
     }
 }

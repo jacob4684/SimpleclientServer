@@ -52,13 +52,13 @@ namespace Entities
             get { return contents; }
             set
             {
-                if ( value.Length > 255 )
-                {
-                    throw new ArgumentException("message to long");
-                }
-                else if (value == null)
+                if (value == null)
                 {
                     throw new ArgumentException("message can't be null");
+                }
+                else if (value.Length > 255)
+                {
+                    throw new ArgumentException("message to long");
                 }
                 else if (contents != value)
                 {
