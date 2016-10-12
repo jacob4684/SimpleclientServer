@@ -5,7 +5,7 @@ using Entities;
 namespace UnitTestProjectSimpleClinentServer
 {
     [TestClass]
-    public class UnitTest1
+    public class UserTest
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
@@ -68,8 +68,8 @@ namespace UnitTestProjectSimpleClinentServer
         {
             //Arrange
             string goodName = "tim";
-            string Password = null;
-            User user = new User(goodName, Password);
+            string password = null;
+            User user = new User(goodName, password);
             //Act
 
             //Assert
@@ -81,8 +81,8 @@ namespace UnitTestProjectSimpleClinentServer
         {
             //Arrange
             string goodname = "tim";
-            string Password = "   ";
-            User user = new User(goodname, Password);
+            string password = "   ";
+            User user = new User(goodname, password);
             //Act
 
             //Assert
@@ -95,8 +95,8 @@ namespace UnitTestProjectSimpleClinentServer
         {
             //Arrange
             string goodname = "tim";
-            string Password = "213123123123123123123123123123123fdff";
-            User user = new User(goodname, Password);
+            string password = "213123123123123123123123123123123fdff";
+            User user = new User(goodname, password);
             //Act
 
             //Assert
@@ -109,12 +109,12 @@ namespace UnitTestProjectSimpleClinentServer
         {
             //Arrange
             string goodname = "tim";
-            string Password = "1";
-            User user = new User(goodname, Password);
+            string password = "1";
+            User user = new User(goodname, password);
             //Act
 
             //Assert
-            Assert.AreEqual(Password, user.Password);
+            Assert.AreEqual(password, user.Password);
 
         }
     }
