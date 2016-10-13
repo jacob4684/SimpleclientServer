@@ -24,5 +24,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void Login(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
