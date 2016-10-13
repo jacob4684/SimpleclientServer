@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -10,7 +12,9 @@ namespace Controller
 {
     public class DatabaseHandler
     {
-        
-        
+        public static void MakeUser(string userName, string password)
+        {
+            DataAccess.Login(userName,password);
+        }
     }
 }

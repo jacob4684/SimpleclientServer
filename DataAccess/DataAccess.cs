@@ -17,6 +17,24 @@ namespace DataAccess
         {
             this.connectionString = connectionString;
         }
+
+        public void Login(string userName, string password)
+        {
+            List<string> userNameList = new List<string>();
+            List<string> passwordList = new List<string>();
+            userNameList = DbReturnListString("SELECT userName From User");
+            passwordList = DbReturnListString("SELECT password From User");
+            foreach (string Name in userNameList)
+            {
+                if (userName == Name)
+                {
+                    
+                }
+            }
+        }
+
+        
+
         public DataAccess()
         {
             connectionString = @"Server=CV-PC-S-02\SQLEXPRESS;Database=SimpleClientServerDB;Trusted_Connection=True;";

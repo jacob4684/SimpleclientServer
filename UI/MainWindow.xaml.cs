@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +28,7 @@ namespace UI
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            
-            UsernameTextBox;
-            PasswordTextBox;
+            Controller.DatabaseHandler.MakeUser(UsernameTextBox.Text , PasswordTextBox.Text);
         }
     }
 }
