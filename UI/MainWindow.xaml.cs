@@ -27,7 +27,9 @@ namespace UI
 
         private void Login(object sender, RoutedEventArgs e)
         {
-
+            
+            UsernameBox;
+            PasswordBox;
         }
     }
 }
