@@ -48,14 +48,14 @@ namespace DataAccess
             {
                 DateTime dateTimeNow = new DateTime();
                 dateTimeNow = DateTime.Now;
-                System.IO.File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) +" "+ message);
-                //using (System.IO.StreamWriter file = new System.IO.StreamWriter(Path))
-                //{
-                //    file.WriteLine(dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) + message);
-                //}
+                //System.IO.File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) +" "+ message);
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(Path,true))
+                {
+                    file.WriteLine($"{dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk"))} {message}");
+                    
+                }
             }
 
         }
-
     }
 }

@@ -8,8 +8,8 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="190,257,0,0" VerticalAlignment="Top" Width="120" Click="Login"/>
-        <TextBox x:Name="UsernameBox" HorizontalAlignment="Left" Height="23" Margin="190,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="190,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Height="23" Margin="190,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="190,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Password" HorizontalAlignment="Left" Margin="108,226,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="label_Copy" Content="Username" HorizontalAlignment="Left" Margin="108,201,0,0" VerticalAlignment="Top" Width="77"/>
 

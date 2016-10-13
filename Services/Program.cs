@@ -13,7 +13,9 @@ namespace Services
         static void Main(string[] args)
         {
             Logger.Log("test");
-            
+            Logger.Log("test1");
+            Logger.Log("test2");
+
         }
     }
 }
