@@ -26,7 +26,7 @@ namespace UI
             InitializeComponent();
         }
 
-        private void Login(object sender, RoutedEventArgs e)
+        private void ButtonLogin(object sender, RoutedEventArgs e)
         {
             Controller.DatabaseHandler.MakeUser(UsernameTextBox.Text , PasswordTextBox.Text);
         }
