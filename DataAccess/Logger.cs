@@ -49,18 +49,17 @@ namespace DataAccess
                 DateTime dateTimeNow = new DateTime();
                 dateTimeNow = DateTime.Now;
                 //System.IO.File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) +" "+ message);
-                using (StreamWriter file = new StreamWriter(Path,true))
+                try
                 {
-                    try
+                    using (StreamWriter file = new StreamWriter(Path, true))
                     {
                         file.WriteLine($"{dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk"))} {message}");
                     }
-                    catch (Exception)
-                    {
+                }
+                catch (Exception)
+                {
 
-                        throw;
-                    }
-                    
+                    throw;
                 }
             }
 

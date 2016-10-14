@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,20 +18,36 @@ namespace DataAccess
         {
             this.connectionString = connectionString;
         }
-
-        public void Login(string userName, string password)
+        /// <summary>
+        /// validates if the username and password input is in the dataBase  
+        /// </summary>
+        /// <param name="userName">is the username for the login</param>
+        /// <param name="password">is the password for the login</param>
+        /// <returns></returns>
+        public bool Login(string userName, string password)
         {
             List<string> userNameList = new List<string>();
             List<string> passwordList = new List<string>();
+
+            
+            bool CorrectName = false;
+            bool CorrectPassword= false;
             userNameList = DbReturnListString("SELECT userName From User");
             passwordList = DbReturnListString("SELECT password From User");
-            foreach (string Name in userNameList)
+
+            int passwordIndex= 0;
+
+            if (userNameList.Contains(userName))
             {
-                if (userName == Name)
-                {
-                    
-                }
+                passwordIndex = userNameList.IndexOf(password);
+                CorrectName = true;
             }
+            if (passwordList[passwordIndex].Contains(password))
+            {
+                CorrectPassword = true;
+            }
+            return Equals(CorrectName,CorrectPassword);
+
         }
 
         
