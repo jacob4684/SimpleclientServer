@@ -51,7 +51,15 @@ namespace DataAccess
                 //System.IO.File.WriteAllText(Path, dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk")) +" "+ message);
                 using (StreamWriter file = new StreamWriter(Path,true))
                 {
-                    file.WriteLine($"{dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk"))} {message}");
+                    try
+                    {
+                        file.WriteLine($"{dateTimeNow.ToString("f", CultureInfo.CreateSpecificCulture("da-Dk"))} {message}");
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                     
                 }
             }
